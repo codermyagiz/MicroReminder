@@ -2,16 +2,21 @@ import microbit
 from win10toast import ToastNotifier
 import time
 
-
-minute = 20
 x = 1
 i = 2
-
 
 toaster = ToastNotifier()
 
 remind = input("What do you want to remind?: ")
-minute = int(input("How many seconds later will it remind you?: "))
+
+try:
+    minute = int(input("How many seconds later will it remind you?: "))
+    if minute <=0:
+        print("Please enter a valid value and restart the code")
+        raise SystemExit
+except ValueError:
+    print("Please enter a valid value and restart the code")
+    raise SystemExit
 
 while x<5:
   x += 1
@@ -36,8 +41,8 @@ while True:
     microbit.display.clear()
 
     while True:
-      t_end = time.time() + 1 * 1
-      t_end_2 = time.time() + int(minute)*1
+      t_end = time.time() + 60 * 1
+      t_end_2 = time.time() + int(minute)*60
       microbit.display.show(str(minute))
       print(minute, "Minutes remaining!")
 
@@ -71,4 +76,16 @@ while True:
 
       toaster.show_toast("Micro:Reminder", f"{remind} Time!", threaded=True, icon_path=None, duration=3)
       microbit.display.clear()
-      minute=20
+
+      x = 1
+      i = 2
+      remind = input("What do you want to remind?: ")
+
+      try:
+          minute = int(input("How many seconds later will it remind you?: "))
+          if minute <=0:
+              print("Please enter a valid value and restart the code")
+              raise SystemExit
+      except ValueError:
+          print("Please enter a valid value and restart the code")
+          raise SystemExit
