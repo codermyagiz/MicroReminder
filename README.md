@@ -50,9 +50,9 @@ If you're on Windows, you'll also need to [install the Windows serial driver](ht
 6. **Done!**
 
 ## Project Video:
-[![MicroReminder](project_image.png)](https://www.youtube.com/watch?v=RBPRp2PKKz4&list=PLEBzg5z8pXrCtTK6KhM-mBqT-N5piLqlz&index=1)
+[![MicroReminder](project.jpg)](https://youtu.be/nGOxDalNg6A)
 
-*I set the time to **20 seconds** for the test.*
+*I set the time to **10 seconds** for the test.*
 
 ## Note:
 I would like to thank [Musab Kilic](https://github.com/musabkilic) for allowing me to excerpt the readme file in the [MicroBike](https://github.com/musabkilic/MicroBike) project.
